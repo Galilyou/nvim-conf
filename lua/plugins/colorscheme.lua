@@ -13,7 +13,7 @@ return {
       local fg_gutter = "#627E97"
       local border = "#547998"
 
-      require("tokyonight").setup({
+      require("tokyonight").setup {
         style = "night",
         on_colors = function(colors)
           colors.bg = bg
@@ -32,9 +32,10 @@ return {
           colors.fg_gutter = fg_gutter
           colors.fg_sidebar = fg_dark
         end,
-      })
+      }
       -- load the colorscheme here
-      vim.cmd([[colorscheme tokyonight]])
+      --vim.cmd([[colorscheme tokyonight]])
+      vim.cmd [[colorscheme kanagawa]]
     end,
   },
 }
