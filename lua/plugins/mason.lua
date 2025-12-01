@@ -13,15 +13,19 @@ return {
         -- install language servers
         "lua-language-server",
 
-        "pyright",              -- Python
+        "pyright", -- Python
         "typescript-language-server", -- JavaScript/TypeScript
-        "rust-analyzer",        -- Rust
-        "clangd",               -- C/C++
-        "gopls",                -- Go
+        "rust-analyzer", -- Rust
+        "clangd", -- C/C++
+        "gopls", -- Go
         "bash-language-server", -- Bash
+        "json-lsp",
+        "dockerfile-language-server",
 
         -- install formatters
         "stylua",
+        "prettier",
+        "black", --python formatter
 
         -- install debuggers
         "debugpy",
