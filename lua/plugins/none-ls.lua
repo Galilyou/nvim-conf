@@ -18,7 +18,7 @@ return {
     opts.sources = require("astrocore").list_insert_unique(opts.sources, {
 
       null_ls.builtins.formatting.prettier.with {
-        filetypes = { "json", "yaml", "js", "ts", "html"},
+        filetypes = { "json", "yaml", "javascript", "typescript", "html"},
       },
       null_ls.builtins.formatting.black,
       -- Set a formatter
