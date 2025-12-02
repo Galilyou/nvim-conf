@@ -35,7 +35,7 @@ return {
       }
       -- load the colorscheme here
       --vim.cmd([[colorscheme tokyonight]])
-      vim.cmd [[colorscheme kanagawa]]
+      -- vim.cmd [[colorscheme kanagawa]]
     end,
   },
 }
