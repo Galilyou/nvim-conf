@@ -14,28 +14,37 @@ return {
       local border = "#547998"
 
       require("tokyonight").setup {
-        style = "night",
-        on_colors = function(colors)
-          colors.bg = bg
-          colors.bg_dark = bg_dark
-          colors.bg_float = bg_dark
-          colors.bg_highlight = bg_highlight
-          colors.bg_popup = bg_dark
-          colors.bg_search = bg_search
-          colors.bg_sidebar = bg_dark
-          colors.bg_statusline = bg_dark
-          colors.bg_visual = bg_visual
-          colors.border = border
-          colors.fg = fg
-          colors.fg_dark = fg_dark
-          colors.fg_float = fg
-          colors.fg_gutter = fg_gutter
-          colors.fg_sidebar = fg_dark
-        end,
+        -- Automatically switch style based on background setting
+        style = vim.o.background == "light" and "day" or "night",
+        -- on_colors = function(colors)
+        --   colors.bg = bg
+        --   colors.bg_dark = bg_dark
+        --   colors.bg_float = bg_dark
+        --   colors.bg_highlight = bg_highlight
+        --   colors.bg_popup = bg_dark
+        --   colors.bg_search = bg_search
+        --   colors.bg_sidebar = bg_dark
+        --   colors.bg_statusline = bg_dark
+        --   colors.bg_visual = bg_visual
+        --   colors.border = border
+        --   colors.fg = fg
+        --   colors.fg_dark = fg_dark
+        --   colors.fg_float = fg
+        --   colors.fg_gutter = fg_gutter
+        --   colors.fg_sidebar = fg_dark
+        -- end,
       }
-      -- load the colorscheme here
-      --vim.cmd([[colorscheme tokyonight]])
-      -- vim.cmd [[colorscheme kanagawa]]
+
+      -- Set up autocommand to reload colorscheme when background changes
+      vim.api.nvim_create_autocmd("OptionSet", {
+        pattern = "background",
+        callback = function()
+          require("tokyonight").setup {
+            style = vim.o.background == "light" and "day" or "night",
+          }
+          vim.cmd.colorscheme("tokyonight")
+        end,
+      })
     end,
   },
 }

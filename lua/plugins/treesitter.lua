@@ -11,6 +11,9 @@ return {
       "vim",
       "markdown",
       "markdown_inline",
+      "c",
+      "python",
+      "javascript"
       -- add more arguments for adding more treesitter parsers
     },
   },
