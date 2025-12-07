@@ -14,7 +14,7 @@ return {
       local border = "#547998"
 
       require("tokyonight").setup {
-        -- Automatically switch style based on background setting
+        -- Automatically s  witch style based on background setting
         style = vim.o.background == "light" and "day" or "night",
         -- on_colors = function(colors)
         --   colors.bg = bg
@@ -42,7 +42,7 @@ return {
           require("tokyonight").setup {
             style = vim.o.background == "light" and "day" or "night",
           }
-          vim.cmd.colorscheme("tokyonight")
+          --vim.cmd.colorscheme("tokyonight")
         end,
       })
     end,
