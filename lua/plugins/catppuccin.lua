@@ -1,9 +1,10 @@
+if true then return {} end
 -- Catppuccin colorscheme plugin configuration
 ---@type LazySpec
 return {
   "catppuccin/nvim",
   name = "catppuccin",
-  priority = 1000, -- make sure to load this before all the other start plugins
+--  priority = 1000, -- make sure to load this before all the other start plugins
   opts = {
     flavour = "auto", -- latte, frappe, macchiato, mocha
     background = { -- :h background
